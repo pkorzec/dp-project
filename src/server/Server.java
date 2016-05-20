@@ -1,21 +1,17 @@
 package server;
 
-import java.io.IOException;
 import java.net.ServerSocket;
 
 public class Server {
 
-    private static ServerSocket serverSocket;
+    ServerSocket serverSocket;
+    int maxConnections;
+    boolean isRunning;
 
-    public static void main(String[] args) {
+    public void launch() {
+        while (isRunning) {
 
-        try {
-            serverSocket = new ServerSocket(Integer.parseInt(args[0]));
-        } catch (IOException e) {
-            System.err.println("Cannot bind socket on given port!");
-            e.printStackTrace();
         }
-
     }
 
 }
